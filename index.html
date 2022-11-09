@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give you Ha</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="wapper">
+        <div class="name">
+            <span>T</span>
+            <span>H</span>
+            <span>U</span>
+            <span>H</span>
+            <span>À</span>
+        </div>
+        <div class="box">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+    </div>
+    <script>
+        const spanList = document.querySelectorAll('span')
+        var index = 0;
+        setInterval((e) => {
+            spanList.forEach((e)=>{
+                e.classList.remove('change-text')
+            })
+
+            spanList[index].classList.add('change-text')
+            index++;
+            if(index == spanList.length){
+                index = 0
+            }
+        },200)
+
+        const box = document.querySelector('.box')
+
+            setInterval(()=>{
+        box.classList.toggle('active')
+            },300)
+    </script>
+</body>
+</html>
